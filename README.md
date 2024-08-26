@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI Chatbot
+
+This is an AI chatbot developed using Next.js and TypeScript. The chatbot allows users to search for information, and it will respond with relevant details. The chatbot is powered by Upstash and Qstash for efficient data handling and processing.
+
+## Features
+
+- **Next.js**: A React framework that enables server-side rendering and generating static websites.
+- **TypeScript**: Used for static type checking and better code quality.
+- **Environment Variables**: Secure storage of API keys and other sensitive data.
+- **Upstash**: Used for vector search and Redis REST operations.
+- **Qstash**: Used for secure and scalable messaging.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Make sure you have the following installed on your machine:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Node.js (version 14 or later)
+- npm or yarn
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **Clone the repository**:
 
-## Learn More
+   ```bash
+   git clone https://github.com/MerchantKhalid/chatbot
+   cd ai-chatbot
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+### Install dependencies:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Set up environment variables:
 
-## Deploy on Vercel
+Create a .env.local file in the root of your project and add the following variables:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- UPSTASH_VECTOR_REST_URL=
+- UPSTASH_VECTOR_REST_TOKEN=
+- QSTASH_TOKEN=
+- UPSTASH_REDIS_REST_URL=
+- UPSTASH_REDIS_REST_TOKEN=
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Run the development server:
+
+- npm run dev
+
+### Usage
+
+To search for information using the chatbot, append the URL you want to search at the end of your local host URL. For example, to search for information on MediaWiki:
+
+- [http://localhost:3000/https://en.wikipedia.org/wiki/MediaWiki](http://localhost:3000/https://en.wikipedia.org/wiki/MediaWiki)
+
+### Deployment
+
+- Deploy this Next.js app to any platform that supports Node.js, such as Vercel, Netlify, or Heroku.
+
+### Acknowledgments
+
+- Next.js
+- TypeScript
+- Upstash
+- Qstash
+- Redis
